@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import "./App.css";
 import { Route } from "react-router-dom";
 
-import Quote from '../componenets/Quote/Quote'
+import Quote from "./Components/Quote/Quote";
 
 function App() {
 
@@ -11,6 +11,7 @@ function App() {
 
   useEffect(() => {
 
+    // Link from https://rapidapi.com/HealThruWords/api/universal-inspirational-quotes
     const quoteFromApi = `https://healthruwords.p.rapidapi.com/v1/quotes/?t=Wisdom&maxR=1&size=medium&id=731`
     console.log('useEffect ran')
 
@@ -22,10 +23,15 @@ function App() {
         const data = await responseJson.json()
         console.log(data, 'data from the api')
 
+
+        // Set the quote taken from the API to state called quote
+        
       } catch(err){
         console.log(err)
       }
     }
+    // Must call the function 
+    makeApiCall()
 
 
   })
@@ -34,6 +40,7 @@ function App() {
   return (
     <div className="container max-w-full h-screen">
       <h1 className="bg-red-500 w-screen">MOTIVATIONAL QUOTE PROJECT</h1>
+      <Quote />
     </div>
   );
 }
