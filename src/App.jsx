@@ -12,7 +12,8 @@ function App() {
   useEffect(() => {
 
     // Link from https://rapidapi.com/HealThruWords/api/universal-inspirational-quotes
-    const quoteFromApi = `https://healthruwords.p.rapidapi.com/v1/quotes/?t=Wisdom&maxR=1&size=medium&id=731`
+    // const quoteFromApi = `https://healthruwords.p.rapidapi.com/v1/quotes/?t=Wisdom&maxR=1&size=medium&id=731`
+    const quoteFromApi = `https://type.fit/api/quotes`
     console.log('useEffect ran')
 
     async function makeApiCall(){
@@ -25,7 +26,8 @@ function App() {
 
 
         // Set the quote taken from the API to state called quote
-        
+        setQuote(data[0])
+
       } catch(err){
         console.log(err)
       }
@@ -40,7 +42,7 @@ function App() {
   return (
     <div className="container max-w-full h-screen">
       <h1 className="bg-red-500 w-screen">MOTIVATIONAL QUOTE PROJECT</h1>
-      <Quote />
+      <Quote quoteData={quote}/>
     </div>
   );
 }
