@@ -26,7 +26,7 @@ function App() {
 
 
         // Set the quote taken from the API to state called quote
-        setQuote(data[0])
+        setQuote(data[22])
 
       } catch(err){
         console.log(err)
@@ -36,7 +36,7 @@ function App() {
     makeApiCall()
 
 
-  })
+  },[])
 
 
   return (
