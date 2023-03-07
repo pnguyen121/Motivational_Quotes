@@ -11,8 +11,10 @@ function App() {
 
   useEffect(() => {
 
+    // variable to get a random number to get a random quote between 1 - 1600
+    let randomNum = Math.floor(Math.random() * 1600) + 1;
+
     // Link from https://rapidapi.com/HealThruWords/api/universal-inspirational-quotes
-    // const quoteFromApi = `https://healthruwords.p.rapidapi.com/v1/quotes/?t=Wisdom&maxR=1&size=medium&id=731`
     const quoteFromApi = `https://type.fit/api/quotes`
     console.log('useEffect ran')
 
@@ -23,10 +25,11 @@ function App() {
 
         const data = await responseJson.json()
         console.log(data, 'data from the api')
+        console.log(randomNum, 'randomNum')
 
 
         // Set the quote taken from the API to state called quote
-        setQuote(data[22])
+        setQuote(data[randomNum])
 
       } catch(err){
         console.log(err)
