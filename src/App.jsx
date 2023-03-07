@@ -37,7 +37,7 @@ function App() {
   return (
     <div className="container max-w-full h-screen">
       <h1 className="bg-red-500 w-screen">MOTIVATIONAL QUOTE PROJECT</h1>
-      <div className="flex grid-rows-1 justify-items-center w-96 max-w-full h-screen">
+      <div className="flex grid-rows-1 justify-items-center justify-center items-center w-screen max-w-full h-screen">
         <Quote quoteData={quote} />
       </div>
     </div>
