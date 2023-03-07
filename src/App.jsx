@@ -35,10 +35,11 @@ function App() {
   }, []);
 
   return (
-    <div className="container max-w-full h-screen">
-      <h1 className="bg-red-500 w-screen">MOTIVATIONAL QUOTE PROJECT</h1>
+    <div className="container max-w-full h-screen bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
+      <h1 className="w-screen text-align-center">KEEP PUSHING</h1>
       <div className="flex grid-rows-1 justify-items-center justify-center items-center w-screen max-w-full h-screen">
         <Quote quoteData={quote} />
+
       </div>
     </div>
   );
