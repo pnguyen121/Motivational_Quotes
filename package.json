@@ -1,12 +1,12 @@
 {
-  "name": "my-react-app",
+  "name": "Motivational_Quotes",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "homepage": "https://github.com/pnguyen121/Motivational_Quotes",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build --base=./",
     "preview": "vite preview",
     "deploy": "gh-pages -d dist"
   },
