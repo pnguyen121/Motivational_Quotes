@@ -1,12 +1,12 @@
 {
-  "name": "Motivational_Quotes",
+  "name": "motivational_quotes",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "homepage": "https://github.com/pnguyen121/Motivational_Quotes",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base=./",
+    "build": "vite build",
     "preview": "vite preview",
     "deploy": "gh-pages -d dist"
   },
