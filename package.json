@@ -5,14 +5,10 @@
   "type": "module",
   "homepage": "https://github.com/pnguyen121/Motivational_Quotes",
   "scripts": {
-    "dev": "concurrently 'vite' 'nodemon server.js'",
+    "dev": "vite",
     "build": "vite build",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist",
     "preview": "vite preview",
-    "start": "node server.js",
-    "client": "vite",
-    "server": "nodemon server.js"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "dotenv": "^16.0.3",
