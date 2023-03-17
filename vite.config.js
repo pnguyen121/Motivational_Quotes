@@ -3,7 +3,6 @@ import react from "@vitejs/plugin-react";
 
 
 export default defineConfig({
-  base:'/Motivational_Quotes/',
   server: {
     proxy: {
       '/api': {
@@ -12,6 +11,7 @@ export default defineConfig({
     }
   },
   plugins: [react()],
+  base:'/Motivational_Quotes/',
   build: {
     manifest: true,
     rollupOptions: {
